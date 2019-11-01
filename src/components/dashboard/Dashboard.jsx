@@ -11,6 +11,7 @@ class Dashboard extends Component {
     deleteFn(id){
         console.log('hit', id)
         axios.delete(`/api/inventory/${id}`)
+        console.log('what')
         .then(res => {
             console.log(res.data)
             this.setState({
@@ -29,7 +30,7 @@ class Dashboard extends Component {
             name = {item.name}
             img = {item.img}
             />
-            <button onClick = {(id) => this.deleteFn(item.id)}>Delete</button>
+            <button onClick = {() => this.deleteFn(item.id)}>Delete</button>
             <hr/>
             </>
             )
