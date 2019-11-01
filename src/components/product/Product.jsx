@@ -2,13 +2,14 @@ import React, { Component } from "react";
 
 
 class Product extends Component {
-  constructor() {
-    super();
-  }
+  
 
   render() {
+    const {img, name, price} = this.props
     return <div>
-        Product
+        <img src={img} alt=" oops"/>
+            <li> price: {price}</li>
+            <li>name :{name}</li>
     </div>;
   }
 }

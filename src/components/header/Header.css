@@ -1,0 +1,12 @@
+header{
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: center;
+    align-content: stretch;
+    background-color: #AB2A19;
+    height: 10vh;
+    font-size:30px;
+    padding-left: 25px;
+}

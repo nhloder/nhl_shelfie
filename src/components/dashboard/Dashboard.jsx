@@ -3,16 +3,32 @@ import Product from '../product/Product';
 
 
 class Dashboard extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         
     }
     
+    
+    
     render() {
+        const inventoryList = this.props.inventory.map((item) => {
+            return(
+                <>
+            <Product
+            price = {item.price}
+            name = {item.name}
+            img = {item.img}
+            />
+            <hr/>
+            </>
+            )
+        })
+        
         return (
             <div>
-                Dashboard
-                <Product />
+                <ul>
+                {inventoryList}
+                </ul>
             </div>
         );
     }
