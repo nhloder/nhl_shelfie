@@ -38,7 +38,12 @@ constructor() {
     }
     addInventory(){
         axios.post('/api/inventory',this.state)
-        // console.log('hit')
+        // console.log('hit');
+        this.onCancel();
+        //^^^ this one works 
+        // this.props.mount();
+        // ^^^ this breaks the app
+        window.location.reload()
     }
 
 

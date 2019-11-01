@@ -47,6 +47,8 @@ module.exports = {
     //         })
     // },
     delete(req, res) {
+        console.log(req.params)
+        
         const db = req.app.get('db');
         db.delete_from_inventory(req.params.id)
             .then(result => {

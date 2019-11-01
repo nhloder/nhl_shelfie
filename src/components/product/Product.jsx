@@ -5,8 +5,9 @@ class Product extends Component {
   
 
   render() {
-    const {img, name, price} = this.props
+    const {img, name, price, id, item} = this.props
     return <div>
+      <div key = {id} ></div>
         <img src={img} alt=" oops"/>
             <li> price: {price}</li>
             <li>name :{name}</li>

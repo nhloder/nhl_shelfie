@@ -18,7 +18,7 @@ componentDidMount(){
   axios
   .get('/api/inventory')
     .then(res => {
-    console.log('hit')
+    // console.log('hit')
     this.setState({
       inventory: res.data
     })
@@ -32,7 +32,10 @@ render(){
       <Dashboard 
       inventory = {this.state.inventory}
       />
-      <Form />
+      <Form
+      mount= {this.componentDidMount}
+      inventory = {this.state.inventory}
+      />
 
     </div>
   );

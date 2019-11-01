@@ -10,7 +10,7 @@ app.use(express.json())
 
 app.get('/api/inventory',ctrl.getInventory)
 app.post('/api/inventory', ctrl.addProduct)
-app.put('/api/inventory:id')
+// app.put('/api/inventory:id')
 app.delete('/api/inventory:id',ctrl.delete)
 
 massive(CONNECTION_STRING).then(databaseConnection => {
