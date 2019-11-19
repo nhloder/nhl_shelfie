@@ -1,44 +1,21 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './App.css';
-import Dashboard from './components/dashboard/Dashboard';
-import Form from './components/form/Form';
 import Header from './components/header/Header';
-import { Component } from 'react';
-import axios from 'axios'
+import routes from './routes';
 
-export default class App extends Component{
-  constructor() {
-    super();
-    this.state = {
-        inventory: []
-    }
+
+
+class App extends Component {    
+    render() {
+    return (
+      <div className="App">
+        <Header />
+        {routes}
+      </div>
+    );
+  }
 }
 
-componentDidMount(){
-  axios
-  .get('/api/inventory')
-    .then(res => {
-    // console.log('hit')
-    this.setState({
-      inventory: res.data
-    })
-  })
-}
+export default App;
 
-render(){
-  return (
-    <div className="App">
-      <Header />
-      <Dashboard 
-      inventory = {this.state.inventory}
-      />
-      <Form
-      mount= {this.componentDidMount}
-      inventory = {this.state.inventory}
-      />
-
-    </div>
-  );
-}
-}
 

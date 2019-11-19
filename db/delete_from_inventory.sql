@@ -1,2 +1,2 @@
 DELETE FROM sim_products
-WHERE id = ${id} ;
+WHERE id = $1 ;
